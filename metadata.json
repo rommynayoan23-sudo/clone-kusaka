@@ -1,0 +1,6 @@
+{
+  "name": "KuSaKA — Kurikulum Satu Pintu SMAN 1 Kakas",
+  "description": "Sistem Informasi Manajemen Kurikulum Terpadu SMA Negeri 1 Kakas untuk perencanaan, administrasi, jadwal, asesmen, supervisi, dan dokumen resmi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

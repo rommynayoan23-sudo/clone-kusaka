@@ -1,0 +1,889 @@
+# MASTER PROMPT PEMBUATAN APLIKASI KuSaKA
+## KURIKULUM SATU PINTU SMA NEGERI 1 KAKAS
+
+### A. PERAN DAN IDENTITAS PENGEMBANG
+
+Bertindaklah sebagai tim pengembang aplikasi profesional yang terdiri atas:
+1. Senior Full-Stack Developer.
+2. UI/UX Designer untuk aplikasi administrasi pendidikan.
+3. Ahli manajemen kurikulum SMA di Indonesia.
+4. Ahli tata naskah dinas dan administrasi sekolah.
+5. Ahli pengelolaan basis data, keamanan informasi, dan otomasi dokumen.
+6. Ahli implementasi Kurikulum Merdeka dan pembelajaran mendalam.
+
+Saya adalah Rommy Senfrie Najoan, S.Pd., Wakil Kepala Sekolah Bidang Kurikulum di SMA Negeri 1 Kakas, Kecamatan Kakas, Kabupaten Minahasa, Provinsi Sulawesi Utara.
+
+Saya ingin membangun aplikasi web bernama **KuSaKA (Kurikulum Satu Pintu SMA Negeri 1 Kakas)** untuk mengintegrasikan seluruh pekerjaan administrasi, perencanaan, pelaksanaan, pengawasan, evaluasi, dan pelaporan bidang kurikulum.
+
+Aplikasi harus benar-benar berfungsi, bukan hanya berupa desain, prototipe visual, atau dashboard dengan tombol yang tidak bekerja.
+
+### B. TUJUAN UTAMA APLIKASI
+
+Bangun aplikasi KuSaKA yang mampu:
+
+1. Mengelola seluruh dokumen Wakil Kepala Sekolah Bidang Kurikulum secara terpusat.
+2. Membuat dokumen resmi sekolah secara otomatis berdasarkan data yang dimasukkan satu kali.
+3. Menyimpan dan mengelola arsip berdasarkan tahun pelajaran, semester, kategori, dan status dokumen.
+4. Mengelola data guru, tenaga kependidikan yang terkait, rombongan belajar, mata pelajaran, jadwal, dan kalender pendidikan.
+5. Menyusun program kerja tahunan bidang kurikulum.
+6. Membantu penyusunan Kurikulum Satuan Pendidikan (KSP).
+7. Mengelola pembagian tugas mengajar, jadwal pelajaran, jadwal asesmen, dan agenda akademik.
+8. Mendukung perencanaan pembelajaran, pelaksanaan asesmen, supervisi akademik, serta evaluasi pembelajaran.
+9. Menghasilkan surat keputusan, surat tugas, berita acara, notulen, laporan, rekapitulasi, dan dokumen pendukung lainnya.
+10. Menyediakan ekspor dokumen ke format DOCX, PDF, dan XLSX sesuai jenis dokumen.
+11. Menyediakan fitur pencarian, pengeditan, duplikasi, revisi, pencetakan, dan pengarsipan.
+12. Menghasilkan laporan kegiatan kurikulum yang siap digunakan untuk rapat, monitoring, supervisi, evaluasi, dan akreditasi.
+13. Mengurangi pekerjaan administratif berulang dengan memanfaatkan data induk dan templat dokumen.
+14. Memanfaatkan AI untuk membantu penyusunan draf dokumen, tanpa mengarang data, peraturan, hasil asesmen, atau fakta sekolah.
+
+### C. IDENTITAS DAN PENGATURAN SEKOLAH
+
+Buat menu Pengaturan Sekolah dengan data awal berikut:
+
+- Nama aplikasi: KuSaKA.
+- Kepanjangan: Kurikulum Satu Pintu SMA Negeri 1 Kakas.
+- Nama sekolah: SMA Negeri 1 Kakas.
+- NPSN: 40100895.
+- Kecamatan: Kakas.
+- Kabupaten: Minahasa.
+- Provinsi: Sulawesi Utara.
+- Kepala sekolah: Moreine Elmaja Pangalila.
+- Wakil Kepala Sekolah Bidang Kurikulum: Rommy Senfrie Najoan, S.Pd.
+- Jenjang: SMA.
+- Fase: E dan F.
+- Kurikulum: mengikuti ketentuan yang berlaku dan pengaturan sekolah.
+- Tahun pelajaran awal: 2026/2027.
+- Semester: Ganjil dan Genap.
+
+Seluruh identitas harus dapat diedit oleh pengguna yang berwenang.
+
+Nama pejabat, NIP, pangkat, golongan, nomor surat, tanggal, tanda tangan, logo, dan informasi lain yang belum tersedia tidak boleh dibuat-buat. Sediakan kolom kosong yang dapat diisi kemudian.
+
+Sediakan pengaturan:
+- Logo sekolah.
+- Kop surat.
+- Alamat dan kontak sekolah.
+- Nama kepala sekolah.
+- Nama wakil kepala sekolah.
+- Data penandatangan dokumen.
+- Format nomor surat.
+- Format tanggal Indonesia.
+- Format penomoran dokumen.
+- Tahun pelajaran aktif.
+- Semester aktif.
+- Templat dokumen resmi sekolah.
+
+### D. DESAIN ANTARMUKA
+
+Buat aplikasi web responsif, modern, profesional, dan mudah digunakan oleh tenaga pendidik.
+
+Gunakan desain:
+- Warna utama biru tua.
+- Warna sekunder putih.
+- Aksen emas yang elegan.
+- Tipografi yang mudah dibaca.
+- Sidebar navigasi yang dapat dibuka dan ditutup.
+- Dashboard dengan kartu statistik.
+- Tabel data dengan pencarian, filter, pengurutan, dan paginasi.
+- Formulir input yang sederhana.
+- Tombol aksi yang konsisten.
+- Notifikasi berhasil atau gagal.
+- Tampilan nyaman pada komputer, laptop, tablet, dan ponsel.
+
+Gunakan bahasa Indonesia untuk seluruh antarmuka.
+
+Buat sidebar dengan menu:
+1. Dashboard.
+2. Profil Sekolah.
+3. Data Induk.
+4. Perencanaan Kurikulum.
+5. Dokumen KSP.
+6. Kalender Pendidikan.
+7. Program Kerja Kurikulum.
+8. Pembagian Tugas Mengajar.
+9. Jadwal Pelajaran.
+10. Perangkat Pembelajaran.
+11. Asesmen dan Penilaian.
+12. Supervisi Akademik.
+13. Pengembangan Guru.
+14. Monitoring dan Evaluasi.
+15. Laporan Kurikulum.
+16. Arsip Digital.
+17. Generator Dokumen AI.
+18. Pengaturan.
+19. Manajemen Pengguna.
+20. Bantuan dan Panduan.
+
+Menu dapat dikembangkan lebih lanjut tanpa mengubah arsitektur utama aplikasi.
+
+### E. DASHBOARD UTAMA
+
+Dashboard harus menampilkan informasi aktual dari basis data, bukan angka contoh permanen.
+
+Tampilkan:
+- Tahun pelajaran aktif.
+- Semester aktif.
+- Jumlah guru.
+- Jumlah mata pelajaran.
+- Jumlah rombongan belajar.
+- Jumlah dokumen yang tersimpan.
+- Jumlah dokumen yang masih berupa draf.
+- Jumlah dokumen yang perlu ditinjau.
+- Agenda akademik mendatang.
+- Jadwal asesmen.
+- Jadwal supervisi akademik.
+- Tenggat penyelesaian program kurikulum.
+- Aktivitas terbaru.
+- Status kelengkapan dokumen per kategori.
+
+Sediakan grafik rekapitulasi dan daftar pekerjaan yang perlu ditindaklanjuti.
+
+Setiap kartu statistik harus dapat diklik untuk membuka data rinci yang bersangkutan.
+
+Jika belum ada data, tampilkan angka nol dan petunjuk untuk mengisi data. Jangan menampilkan data fiktif sebagai data resmi sekolah.
+
+### F. MODUL 1 — DATA INDUK SEKOLAH
+
+Buat pengelolaan data induk yang dapat digunakan bersama oleh semua modul.
+
+Data yang dikelola meliputi:
+
+1. Profil sekolah.
+2. Kepala sekolah.
+3. Wakil kepala sekolah.
+4. Guru dan tenaga kependidikan.
+5. Mata pelajaran.
+6. Rombongan belajar.
+7. Peserta didik jika diperlukan untuk administrasi kurikulum.
+8. Pembagian tugas tambahan guru.
+9. Struktur organisasi.
+10. Kalender pendidikan.
+11. Tahun pelajaran dan semester.
+12. Ruang kelas.
+13. Data jam pelajaran.
+14. Data kegiatan akademik.
+
+Sediakan fitur:
+- Tambah, lihat, ubah, dan arsipkan data.
+- Impor data dari XLSX dan CSV.
+- Unduh templat impor.
+- Validasi data wajib.
+- Deteksi data duplikat.
+- Pencarian dan filter.
+- Ekspor data.
+- Riwayat perubahan.
+
+Gunakan satu sumber data untuk seluruh modul. Jika data guru berubah, dokumen yang dibuat berikutnya harus menggunakan data terbaru tanpa harus memasukkan ulang identitas guru.
+
+### G. MODUL 2 — PERENCANAAN KURIKULUM DAN KSP
+
+Bangun modul untuk menyusun dan mengelola dokumen Kurikulum Satuan Pendidikan SMA Negeri 1 Kakas.
+
+Dokumen yang didukung:
+
+1. Sampul KSP.
+2. Lembar pengesahan.
+3. Kata pengantar.
+4. Daftar isi.
+5. Karakteristik satuan pendidikan.
+6. Analisis karakteristik peserta didik.
+7. Analisis karakteristik pendidik dan tenaga kependidikan.
+8. Analisis sarana dan prasarana.
+9. Analisis lingkungan dan potensi sekolah.
+10. Visi sekolah.
+11. Misi sekolah.
+12. Tujuan sekolah.
+13. Pengorganisasian pembelajaran.
+14. Struktur kurikulum.
+15. Pengaturan intrakurikuler.
+16. Pengaturan kokurikuler.
+17. Pengaturan ekstrakurikuler.
+18. Perencanaan pembelajaran dan asesmen.
+19. Pendampingan, evaluasi, dan pengembangan profesional.
+20. Kalender pendidikan.
+21. Lampiran pendukung KSP.
+
+Sediakan fasilitas untuk menyelaraskan visi, misi, dan tujuan sekolah dengan data Rapor Pendidikan, kondisi nyata sekolah, 8 Dimensi Profil Lulusan, 7 Kebiasaan Anak Indonesia Hebat, dan potensi lingkungan sekolah.
+
+Buat fitur penyusunan draf KSP berbantuan AI. AI harus meminta atau menggunakan data sekolah yang tersedia, menandai informasi yang belum ada, serta tidak mengarang hasil Rapor Pendidikan atau dasar hukum.
+
+Sediakan versi dokumen, riwayat revisi, status persetujuan, dan ekspor dokumen KSP lengkap ke DOCX dan PDF.
+
+### H. MODUL 3 — PROGRAM KERJA WAKIL KEPALA SEKOLAH BIDANG KURIKULUM
+
+Buat generator dokumen berikut:
+
+1. Program kerja tahunan bidang kurikulum.
+2. Program kerja semester ganjil.
+3. Program kerja semester genap.
+4. Rencana kegiatan akademik.
+5. Rencana monitoring pembelajaran.
+6. Rencana evaluasi pelaksanaan kurikulum.
+7. Program peningkatan mutu pembelajaran.
+8. Program pengembangan profesional guru.
+9. Rencana tindak lanjut hasil evaluasi.
+10. Laporan pelaksanaan program kerja.
+11. Laporan akhir tahun bidang kurikulum.
+
+Setiap program memiliki kolom:
+- Nama kegiatan.
+- Latar belakang.
+- Dasar pelaksanaan.
+- Tujuan.
+- Sasaran.
+- Indikator keberhasilan.
+- Tahapan kegiatan.
+- Jadwal pelaksanaan.
+- Penanggung jawab.
+- Pelaksana.
+- Sumber daya dan anggaran jika relevan.
+- Bukti fisik.
+- Target.
+- Realisasi.
+- Kendala.
+- Tindak lanjut.
+
+Sediakan tampilan tabel program kerja yang dapat diekspor ke Word dan Excel.
+
+### I. MODUL 4 — KALENDER PENDIDIKAN DAN AGENDA AKADEMIK
+
+Buat kalender akademik sekolah yang dapat menampilkan:
+- Hari efektif sekolah.
+- Awal dan akhir semester.
+- Libur sekolah.
+- Kegiatan pembelajaran.
+- Asesmen sumatif.
+- Asesmen tengah semester jika dijadwalkan sekolah.
+- Asesmen akhir semester.
+- Ujian sekolah jika berlaku.
+- Tes Kemampuan Akademik jika berlaku.
+- Pembagian rapor.
+- Kegiatan kokurikuler.
+- Kegiatan pengembangan guru.
+- Supervisi akademik.
+- Rapat evaluasi pembelajaran.
+- Kegiatan akademik lainnya.
+
+Sediakan tampilan bulanan, mingguan, dan daftar agenda.
+
+Tanggal kegiatan harus dapat diedit dan disesuaikan dengan kalender pendidikan resmi yang digunakan sekolah.
+
+Jangan menetapkan tanggal resmi secara otomatis tanpa sumber yang jelas. Berikan penanda pada tanggal yang belum diverifikasi.
+
+Sediakan pengingat agenda, pemeriksaan benturan jadwal, serta ekspor kalender ke PDF dan Excel.
+
+### J. MODUL 5 — PEMBAGIAN TUGAS MENGAJAR
+
+Buat modul pembagian tugas mengajar berdasarkan:
+- Data guru.
+- Mata pelajaran.
+- Kelas dan rombongan belajar.
+- Fase.
+- Alokasi jam pelajaran.
+- Tugas tambahan guru.
+- Ketersediaan guru.
+- Ketentuan beban kerja yang berlaku.
+- Ketentuan internal sekolah.
+
+Fitur:
+1. Input pembagian tugas mengajar.
+2. Rekap jam mengajar setiap guru.
+3. Rekap jam mengajar setiap mata pelajaran.
+4. Rekap jumlah rombongan belajar.
+5. Deteksi kemungkinan benturan penugasan.
+6. Peringatan jika alokasi jam tidak sesuai dengan konfigurasi yang ditetapkan.
+7. Rekap tugas tambahan.
+8. Pembuatan SK pembagian tugas mengajar.
+9. Pembuatan lampiran pembagian tugas.
+10. Pembuatan daftar wali kelas.
+11. Pembuatan daftar tugas tambahan guru.
+12. Ekspor ke DOCX, PDF, dan XLSX.
+
+Jangan menyatakan seorang guru memenuhi atau tidak memenuhi ketentuan beban kerja hanya berdasarkan perkiraan. Tampilkan dasar perhitungan, parameter yang digunakan, dan peringatan untuk diverifikasi.
+
+### K. MODUL 6 — GENERATOR JADWAL PELAJARAN
+
+Buat generator jadwal pelajaran dengan metode penjadwalan berbasis kendala.
+
+Input:
+- Hari belajar.
+- Jumlah jam pelajaran per hari.
+- Durasi setiap jam pelajaran.
+- Waktu istirahat.
+- Data guru.
+- Mata pelajaran.
+- Rombongan belajar.
+- Alokasi jam pelajaran.
+- Ketersediaan guru.
+- Ruang belajar jika diperlukan.
+
+Ketentuan:
+1. Guru tidak boleh mengajar dua kelas pada waktu yang sama.
+2. Satu kelas tidak boleh memiliki dua mata pelajaran pada waktu yang sama.
+3. Alokasi jam pelajaran harus sesuai dengan data yang ditetapkan.
+4. Waktu istirahat tidak boleh terisi jadwal pembelajaran.
+5. Ketersediaan guru harus diperhitungkan.
+6. Jika jadwal tidak dapat diselesaikan, tampilkan kendala yang menyebabkan konflik.
+7. Jadwal yang dihasilkan harus dapat diedit secara manual.
+8. Setiap perubahan jadwal harus diperiksa kembali terhadap konflik.
+9. Sediakan jadwal per kelas, per guru, dan per hari.
+10. Sediakan ekspor ke Excel, PDF, dan format cetak.
+
+Jangan mengklaim jadwal valid jika masih terdapat konflik. Tampilkan ringkasan hasil pemeriksaan sebelum jadwal ditetapkan.
+
+### L. MODUL 7 — PERANGKAT PEMBELAJARAN
+
+Buat generator administrasi pembelajaran dengan memanfaatkan data guru dan mata pelajaran.
+
+Jenis dokumen:
+1. Capaian Pembelajaran (CP).
+2. Tujuan Pembelajaran (TP).
+3. Alur Tujuan Pembelajaran (ATP).
+4. Program tahunan.
+5. Program semester.
+6. Modul ajar.
+7. Rencana pembelajaran.
+8. Lembar Kerja Peserta Didik (LKPD).
+9. Bahan ajar.
+10. Media pembelajaran.
+11. Instrumen asesmen.
+12. Kisi-kisi asesmen.
+13. Rubrik penilaian.
+14. Program remedial dan pengayaan.
+15. Refleksi pembelajaran.
+
+Sediakan pengaturan:
+- Fase E atau F.
+- Kelas X, XI, atau XII.
+- Mata pelajaran.
+- Semester.
+- Alokasi waktu.
+- Materi.
+- Tujuan pembelajaran.
+- Karakteristik peserta didik.
+- Kebutuhan pembelajaran berdiferensiasi.
+- Pembelajaran mendalam.
+- 8 Dimensi Profil Lulusan.
+- Bentuk asesmen.
+- Kebutuhan khusus yang relevan.
+
+AI hanya boleh menggunakan CP, regulasi, atau dokumen rujukan yang tersedia atau telah diverifikasi. Jika sumber belum tersedia, beri label "Perlu verifikasi" dan jangan mengklaim bahwa konten tersebut merupakan kutipan resmi.
+
+### M. MODUL 8 — ASESMEN DAN PENILAIAN
+
+Buat pengelolaan dokumen asesmen sekolah, antara lain:
+
+1. Program asesmen semester.
+2. Jadwal asesmen.
+3. SK panitia asesmen.
+4. Surat tugas pengawas.
+5. Daftar peserta asesmen.
+6. Daftar ruang.
+7. Daftar pengawas.
+8. Tata tertib asesmen.
+9. Berita acara pelaksanaan.
+10. Daftar hadir peserta.
+11. Daftar hadir pengawas.
+12. Kisi-kisi asesmen.
+13. Kartu soal jika diperlukan.
+14. Rekapitulasi hasil asesmen.
+15. Analisis hasil asesmen.
+16. Program remedial dan pengayaan.
+17. Laporan pelaksanaan asesmen.
+18. Dokumen pembagian rapor.
+
+Fitur:
+- Pengaturan asesmen berdasarkan semester dan tahun pelajaran.
+- Penjadwalan mata pelajaran dan ruang.
+- Deteksi benturan pengawas.
+- Rekap data hasil asesmen berdasarkan data yang diimpor.
+- Analisis ketuntasan berdasarkan kriteria yang ditetapkan sekolah.
+- Rekap nilai per kelas dan mata pelajaran.
+- Ekspor dokumen.
+- Pembuatan laporan hasil asesmen.
+
+Hasil penilaian tidak boleh direkayasa oleh AI. AI hanya membantu mengolah, menganalisis, atau menjelaskan data yang benar-benar diberikan pengguna.
+
+### N. MODUL 9 — SUPERVISI AKADEMIK
+
+Buat modul pengelolaan supervisi akademik yang mencakup:
+
+1. Program supervisi akademik.
+2. Jadwal supervisi.
+3. Instrumen supervisi.
+4. Daftar guru sasaran.
+5. Catatan observasi pembelajaran.
+6. Hasil observasi.
+7. Umpan balik kepada guru.
+8. Refleksi guru.
+9. Tindak lanjut supervisi.
+10. Rekapitulasi hasil supervisi.
+11. Laporan supervisi akademik.
+12. Bukti tindak lanjut.
+
+Sediakan status:
+- Belum direncanakan.
+- Terjadwal.
+- Terlaksana.
+- Menunggu tindak lanjut.
+- Selesai.
+
+Setiap hasil observasi harus bersumber dari catatan atau data yang dimasukkan pengguna. AI dapat membantu menyusun umpan balik yang konstruktif, tetapi tidak boleh menciptakan hasil observasi.
+
+Lindungi catatan supervisi dengan pembatasan akses berdasarkan peran.
+
+### O. MODUL 10 — PENGEMBANGAN GURU
+
+Buat administrasi kegiatan:
+- IHT.
+- Workshop.
+- Lokakarya.
+- Komunitas belajar.
+- MGMP.
+- Pelatihan implementasi kurikulum.
+- Pengembangan pembelajaran mendalam.
+- Pelatihan asesmen.
+- Pemanfaatan teknologi pendidikan.
+- Kegiatan berbagi praktik baik.
+
+Dokumen yang dihasilkan:
+1. Program kegiatan.
+2. SK panitia.
+3. Surat undangan.
+4. Daftar hadir.
+5. Jadwal kegiatan.
+6. Materi kegiatan.
+7. Notulen.
+8. Dokumentasi kegiatan.
+9. Evaluasi kegiatan.
+10. Sertifikat jika diperlukan.
+11. Laporan pelaksanaan.
+12. Rencana tindak lanjut.
+
+### P. MODUL 11 — MONITORING, EVALUASI, DAN PENJAMINAN MUTU
+
+Buat modul untuk:
+- Monitoring keterlaksanaan pembelajaran.
+- Evaluasi program kurikulum.
+- Evaluasi kalender pendidikan.
+- Evaluasi asesmen.
+- Evaluasi perangkat pembelajaran.
+- Monitoring pelaksanaan tugas mengajar.
+- Evaluasi kegiatan pengembangan guru.
+- Tindak lanjut hasil supervisi.
+- Dokumentasi praktik baik.
+- Penyusunan laporan evaluasi.
+
+Sediakan tabel yang memuat:
+- Indikator.
+- Target.
+- Capaian.
+- Bukti pendukung.
+- Analisis kesenjangan.
+- Akar masalah.
+- Rekomendasi perbaikan.
+- Penanggung jawab.
+- Tenggat waktu.
+- Status tindak lanjut.
+
+Dukung pendekatan perencanaan berbasis data, termasuk siklus Identifikasi, Refleksi, dan Benahi (IRB) jika relevan dengan instrumen yang digunakan sekolah.
+
+Jangan membuat nilai Rapor Pendidikan atau indikator mutu fiktif. Pengguna harus dapat mengimpor atau mengisi data sumbernya.
+
+### Q. MODUL 12 — GENERATOR DOKUMEN RESMI
+
+Buat pusat pembuatan dokumen resmi yang dapat menggunakan data induk sekolah.
+
+Jenis dokumen:
+- Surat Keputusan Kepala Sekolah.
+- Surat tugas.
+- Surat undangan.
+- Surat pemberitahuan.
+- Surat pengantar.
+- Berita acara.
+- Notulen rapat.
+- Daftar hadir.
+- Daftar pembagian tugas.
+- Jadwal kegiatan.
+- Program kerja.
+- Laporan kegiatan.
+- Laporan semester.
+- Laporan akhir tahun.
+- Instrumen monitoring.
+- Instrumen evaluasi.
+- Dokumen pendukung supervisi.
+- Dokumen pendukung akreditasi.
+
+Setiap generator dokumen harus menyediakan formulir untuk data yang diperlukan.
+
+Sistem harus:
+1. Mengambil identitas sekolah secara otomatis.
+2. Mengambil nama pejabat dari data induk.
+3. Menyediakan nomor dan tanggal dokumen.
+4. Menghasilkan draf yang dapat diedit.
+5. Menampilkan pratinjau sebelum dicetak.
+6. Mendukung kop surat dan logo.
+7. Menyediakan ruang tanda tangan.
+8. Menyimpan dokumen sebagai draf.
+9. Menyediakan persetujuan sebelum dokumen ditetapkan.
+10. Menyimpan versi dan riwayat revisi.
+11. Mengekspor ke DOCX dan PDF.
+12. Menyediakan salinan data terstruktur untuk laporan.
+
+Nomor surat, tanggal, nama penandatangan, dan dasar hukum tidak boleh diisi secara fiktif. Tanda tangan digital tidak boleh dibuat atau ditempelkan tanpa otorisasi yang sah.
+
+### R. MODUL 13 — ARSIP DIGITAL
+
+Buat repositori dokumen dengan kategori:
+- KSP.
+- Program kerja.
+- Kalender pendidikan.
+- Pembagian tugas mengajar.
+- Jadwal pelajaran.
+- Perangkat pembelajaran.
+- Asesmen.
+- Supervisi akademik.
+- Pengembangan guru.
+- Monitoring dan evaluasi.
+- Surat keputusan.
+- Surat tugas.
+- Laporan.
+- Dokumen lainnya.
+
+Setiap dokumen memiliki:
+- Judul.
+- Nomor dokumen jika ada.
+- Kategori.
+- Tahun pelajaran.
+- Semester.
+- Tanggal pembuatan.
+- Pembuat.
+- Status.
+- Versi.
+- Deskripsi.
+- Lampiran.
+- Kata kunci.
+
+Sediakan:
+- Pencarian berdasarkan judul dan isi jika tersedia.
+- Filter berdasarkan kategori dan tahun pelajaran.
+- Unggah dan unduh berkas.
+- Pratinjau.
+- Revisi.
+- Pengarsipan.
+- Penghapusan dengan konfirmasi dan pembatasan hak akses.
+- Pencatatan aktivitas pengguna.
+- Cadangan data dan pemulihan.
+
+Jangan menganggap dokumen telah tersimpan hanya karena pratinjaunya tampil. Pastikan operasi penyimpanan benar-benar berhasil sebelum menampilkan notifikasi sukses.
+
+### S. MODUL 14 — LAPORAN OTOMATIS
+
+Buat fitur untuk menyusun:
+1. Laporan bulanan bidang kurikulum.
+2. Laporan semester ganjil.
+3. Laporan semester genap.
+4. Laporan akhir tahun pelajaran.
+5. Rekap program kerja.
+6. Rekap jadwal dan asesmen.
+7. Rekap pembagian tugas mengajar.
+8. Rekap supervisi akademik.
+9. Rekap pengembangan guru.
+10. Rekap dokumen yang belum lengkap.
+11. Rekap tindak lanjut monitoring dan evaluasi.
+
+Laporan harus disusun dari data aktual yang tersimpan di aplikasi.
+
+Setiap laporan harus menampilkan periode, sumber data, tanggal pembuatan, dan status kelengkapan. Jika data belum tersedia, tampilkan bagian yang belum lengkap dan minta pengguna melengkapinya.
+
+### T. MODUL 15 — GENERATOR AI KuSaKA
+
+Integrasikan Gemini API melalui mekanisme backend yang aman apabila layanan tersebut tersedia.
+
+Buat asisten AI dengan fungsi:
+- Menyusun draf dokumen administrasi.
+- Menyempurnakan bahasa resmi.
+- Membuat kerangka program kerja.
+- Menyusun agenda kegiatan.
+- Membantu menganalisis data yang diunggah.
+- Menyusun ringkasan rapat.
+- Membuat laporan berdasarkan data.
+- Membantu mengidentifikasi dokumen yang belum tersedia.
+- Menyusun rekomendasi tindak lanjut.
+- Mengubah data terstruktur menjadi narasi laporan.
+- Membantu mencari inkonsistensi antardokumen.
+
+Alur penggunaan AI:
+1. Pengguna memilih jenis dokumen.
+2. Sistem meminta data yang diperlukan.
+3. Sistem mengambil data yang diizinkan dari basis data.
+4. AI menyusun draf.
+5. Sistem memvalidasi kelengkapan data.
+6. Pengguna memeriksa dan mengedit.
+7. Pengguna menyimpan sebagai draf.
+8. Dokumen dapat diajukan untuk persetujuan.
+9. Dokumen yang disetujui dapat diekspor.
+
+Aturan AI:
+- Jangan mengarang data sekolah.
+- Jangan mengarang dasar hukum.
+- Jangan membuat nilai asesmen atau hasil supervisi.
+- Bedakan fakta, asumsi, rekomendasi, dan informasi yang belum diverifikasi.
+- Gunakan bahasa Indonesia formal.
+- Pertahankan konsistensi istilah dan format dokumen.
+- Jangan mengirim data pribadi atau dokumen rahasia ke layanan AI tanpa otorisasi.
+- Tampilkan pesan jika AI gagal menghasilkan jawaban.
+- Sediakan mode penyusunan dokumen tanpa AI sebagai alternatif.
+
+### U. MODUL 16 — MANAJEMEN PENGGUNA DAN KEAMANAN
+
+Buat autentikasi dan pengaturan hak akses berbasis peran.
+
+Peran pengguna:
+1. Administrator aplikasi.
+2. Kepala sekolah.
+3. Wakil kepala sekolah bidang kurikulum.
+4. Staf kurikulum.
+5. Guru.
+6. Pengguna baca-saja jika diperlukan.
+
+Hak akses:
+- Administrator mengatur konfigurasi teknis dan akun.
+- Kepala sekolah meninjau dokumen dan memberikan persetujuan sesuai kewenangan.
+- Wakil kepala sekolah bidang kurikulum mengelola modul kurikulum sesuai kewenangan.
+- Staf kurikulum mengelola data yang ditugaskan.
+- Guru mengakses dokumen atau data yang relevan dengan tugasnya.
+- Pengguna baca-saja hanya dapat melihat data yang diizinkan.
+
+Ketentuan keamanan:
+- Gunakan autentikasi yang benar.
+- Terapkan otorisasi di sisi server, bukan hanya menyembunyikan tombol.
+- Gunakan validasi input.
+- Simpan rahasia API hanya di server atau pengelola rahasia yang sesuai.
+- Jangan menaruh API key di kode frontend.
+- Lindungi dokumen dan data pribadi.
+- Gunakan koneksi aman.
+- Catat aktivitas penting.
+- Sediakan prosedur pencadangan dan pemulihan.
+- Terapkan kebijakan penyimpanan dan penghapusan data.
+- Jangan menganggap login berhasil sebagai bukti bahwa semua akses data telah terlindungi.
+
+### V. ARSITEKTUR DAN TEKNOLOGI
+
+Bangun aplikasi sebagai web app modern yang dapat dikembangkan dan dipelihara.
+
+Gunakan:
+- React dengan TypeScript.
+- Komponen antarmuka yang dapat digunakan ulang.
+- Sistem navigasi yang terstruktur.
+- Formulir dengan validasi.
+- Basis data persisten.
+- Penyimpanan berkas yang sesuai.
+- API backend untuk operasi yang memerlukan otorisasi.
+- Gemini API untuk fungsi AI jika dikonfigurasi.
+- Pustaka ekspor DOCX, PDF, dan XLSX yang sesuai.
+- Pengujian fungsi penting.
+
+Pilih Firebase Authentication, Cloud Firestore, dan Firebase Storage apabila sesuai dengan kebutuhan aplikasi dan tersedia dalam lingkungan pengembangan.
+
+Jika menggunakan Firebase:
+- Buat skema koleksi dan relasi yang jelas.
+- Terapkan Security Rules.
+- Validasi akses pada setiap operasi penting.
+- Hindari akses terbuka ke seluruh basis data.
+- Pisahkan data per sekolah, tahun pelajaran, dan kategori sesuai kebutuhan.
+- Gunakan transaksi atau mekanisme konsistensi yang tepat untuk perubahan penting.
+- Sediakan mekanisme ekspor dan pencadangan.
+
+Jika Firebase belum dikonfigurasi, buat mode pengembangan dengan data demonstrasi yang diberi label jelas. Jangan mengklaim data demonstrasi sudah menjadi penyimpanan permanen.
+
+Jangan menyimpan data produksi hanya di localStorage. Gunakan penyimpanan lokal hanya untuk preferensi antarmuka atau kebutuhan sementara yang aman.
+
+### W. STRUKTUR DATA
+
+Rancang struktur data yang sekurang-kurangnya mencakup:
+- schools
+- users
+- roles
+- academic_years
+- semesters
+- teachers
+- subjects
+- classes
+- teaching_assignments
+- calendars
+- schedules
+- curriculum_documents
+- work_programs
+- learning_documents
+- assessments
+- supervision_records
+- teacher_development_activities
+- monitoring_records
+- official_documents
+- document_templates
+- document_versions
+- archive_files
+- notifications
+- audit_logs
+- application_settings
+
+Setiap data penting memiliki ID unik, waktu pembuatan, waktu perubahan, dan informasi pengguna yang melakukan perubahan jika relevan.
+
+Gunakan relasi yang konsisten. Hindari menggandakan identitas sekolah, guru, dan tahun pelajaran pada banyak tempat tanpa mekanisme sinkronisasi.
+
+Sediakan migrasi skema apabila struktur data berubah.
+
+### X. FORMAT DOKUMEN
+
+Dokumen resmi harus mengikuti kaidah tata naskah dinas dan ketentuan yang berlaku bagi sekolah.
+
+Standar awal:
+- Ukuran kertas A4 untuk dokumen umum.
+- Margin yang dapat diatur.
+- Font formal yang mudah dibaca.
+- Kop surat sekolah.
+- Judul dokumen yang jelas.
+- Penomoran halaman untuk dokumen panjang.
+- Tabel dengan ukuran yang proporsional.
+- Tempat tanda tangan.
+- Identitas pejabat yang dapat diubah.
+- Tanggal dan nomor dokumen yang dapat dikonfigurasi.
+
+Untuk dokumen yang memiliki format khusus, sediakan templat tersendiri.
+
+DOCX dan PDF harus benar-benar dihasilkan sebagai berkas yang dapat dibuka, bukan sekadar mengubah ekstensi berkas.
+
+Pastikan isi dokumen, tabel, kop surat, dan penomoran tidak terpotong ketika dicetak.
+
+### Y. ALUR KERJA DOKUMEN
+
+Gunakan status dokumen:
+1. Draf.
+2. Dalam pemeriksaan.
+3. Perlu revisi.
+4. Menunggu persetujuan.
+5. Disetujui.
+6. Ditetapkan atau diterbitkan.
+7. Diarsipkan.
+
+Status harus mencerminkan tindakan nyata yang telah dilakukan pengguna.
+
+Sediakan riwayat perubahan yang menunjukkan:
+- Waktu perubahan.
+- Pengguna.
+- Jenis perubahan.
+- Versi dokumen.
+- Catatan revisi.
+
+Dokumen yang telah disetujui tidak boleh diam-diam berubah ketika data induk diperbarui. Simpan salinan atau snapshot data yang digunakan pada versi dokumen tersebut.
+
+### Z. PENGUJIAN DAN KRITERIA KEBERHASILAN
+
+Sebelum menyatakan aplikasi selesai, lakukan pengujian terhadap seluruh fungsi utama.
+
+Periksa bahwa:
+1. Pengguna dapat masuk dan keluar dengan benar.
+2. Hak akses berbeda sesuai peran.
+3. Data induk dapat ditambah, diedit, dicari, dan disimpan.
+4. Data tetap tersedia setelah halaman dimuat ulang dan setelah pengguna masuk kembali.
+5. Dokumen dapat dibuat dari data induk.
+6. Pratinjau sesuai dengan hasil ekspor.
+7. Berkas DOCX, PDF, dan XLSX dapat dibuka.
+8. Jadwal pelajaran diperiksa terhadap konflik.
+9. Data asesmen tidak berubah tanpa tindakan yang sah.
+10. Arsip dapat dicari dan diunduh sesuai hak akses.
+11. Kesalahan jaringan dan penyimpanan ditangani dengan jelas.
+12. Tidak ada tombol utama yang hanya menjadi hiasan.
+13. Data demonstrasi tidak tercampur dengan data resmi.
+14. Aplikasi dapat dibuka pada layar komputer dan ponsel.
+15. Tidak ada API key yang terekspos pada frontend.
+
+Buat data uji yang jelas terpisah dari data produksi.
+
+Sediakan halaman status pengujian yang menunjukkan fungsi yang lulus, gagal, atau belum diuji. Jangan menyatakan semua fungsi lulus apabila belum benar-benar diuji.
+
+### AA. STRATEGI PEMBANGUNAN BERTAHAP
+
+Jangan mencoba membuat seluruh modul secara sekaligus dengan hasil yang tidak stabil.
+
+Bangun aplikasi dalam tahapan berikut:
+
+Tahap 1 — Fondasi:
+- Kerangka aplikasi.
+- Desain UI/UX.
+- Navigasi.
+- Dashboard.
+- Profil sekolah.
+- Pengaturan tahun pelajaran.
+- Autentikasi dan struktur hak akses.
+- Basis data dan penyimpanan.
+
+Tahap 2 — Data dan dokumen:
+- Data induk.
+- Arsip digital.
+- Generator dokumen resmi.
+- Ekspor DOCX, PDF, dan XLSX.
+
+Tahap 3 — Perencanaan:
+- KSP.
+- Program kerja kurikulum.
+- Kalender pendidikan.
+- Pembagian tugas mengajar.
+
+Tahap 4 — Operasional akademik:
+- Jadwal pelajaran.
+- Perangkat pembelajaran.
+- Asesmen dan penilaian.
+
+Tahap 5 — Peningkatan mutu:
+- Supervisi akademik.
+- Pengembangan guru.
+- Monitoring dan evaluasi.
+- Laporan otomatis.
+
+Tahap 6 — Kecerdasan buatan:
+- Generator dokumen AI.
+- Analisis data.
+- Rekomendasi tindak lanjut.
+- Pemeriksaan kelengkapan dokumen.
+
+Tahap 7 — Finalisasi:
+- Pengujian menyeluruh.
+- Perbaikan bug.
+- Pengujian keamanan.
+- Dokumentasi teknis.
+- Panduan pengguna.
+- Panduan deployment.
+- Prosedur backup dan pemulihan.
+
+Setiap tahap harus menghasilkan implementasi nyata yang dapat diuji sebelum melanjutkan ke tahap berikutnya.
+
+### AB. INSTRUKSI PERTAMA UNTUK GOOGLE AI STUDIO
+
+Mulailah dengan membangun Tahap 1 sebagai fondasi aplikasi KuSaKA yang benar-benar berjalan.
+
+Tampilkan:
+1. Struktur proyek.
+2. Dashboard profesional.
+3. Sidebar dan navigasi.
+4. Halaman profil sekolah.
+5. Pengaturan tahun pelajaran dan semester.
+6. Data induk dasar.
+7. Skema basis data.
+8. Sistem autentikasi dan hak akses yang direncanakan serta implementasi yang dapat dijalankan.
+9. Status koneksi dan penyimpanan data.
+10. Panduan konfigurasi API dan basis data.
+11. Daftar fitur yang sudah berfungsi dan yang masih perlu dikembangkan.
+
+Jangan hanya memberikan contoh kode yang terpisah-pisah. Buat dan perbarui berkas proyek secara konsisten sesuai kemampuan lingkungan Google AI Studio.
+
+Setelah fondasi berjalan, lanjutkan pengembangan berdasarkan tahapan di atas. Pertahankan struktur data, gaya desain, navigasi, dan pola keamanan yang sama.
+
+Jika ada layanan yang memerlukan konfigurasi manual, jelaskan langkahnya dengan jelas. Jangan berpura-pura bahwa layanan tersebut telah terhubung.
+
+Prioritas tertinggi adalah keandalan data, kemudahan penggunaan, konsistensi dokumen, keamanan, dan penghematan waktu kerja Wakil Kepala Sekolah Bidang Kurikulum.
+
+Nama produk yang digunakan secara konsisten adalah **KuSaKA — Kurikulum Satu Pintu SMA Negeri 1 Kakas**.
+
+Mulai pembangunan sekarang.
