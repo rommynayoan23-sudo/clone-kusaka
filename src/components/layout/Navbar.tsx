@@ -37,6 +37,7 @@ const MENU_LABELS: Record<string, { title: string; subtitle: string }> = {
   teacher_dev: { title: 'Pengembangan Profesional Guru', subtitle: 'IHT, lokakarya, MGMP, dan komunitas belajar Mapalus Edukasi' },
   monev: { title: 'Monitoring & Evaluasi (IRB)', subtitle: 'Siklus Identifikasi, Refleksi, Benahi dan keterlaksanaan kurikulum' },
   reports: { title: 'Laporan Kurikulum Otomatis', subtitle: 'Laporan berkala, semesteran, dan tahunan siap cetak/arsip' },
+  official_documents: { title: 'Generator Dokumen Resmi', subtitle: 'Penyusunan SK, Surat Tugas, Undangan, Berita Acara, dan Notulen terintegrasi data induk' },
   digital_archive: { title: 'Arsip Digital Kurikulum', subtitle: 'Repositori terstruktur dokumen resmi, SK, dan naskah dinas' },
   ai_generator: { title: 'Generator AI KuSaKA', subtitle: 'Asisten cerdas perumusan draf naskah dinas dan telaah dokumen' },
   settings: { title: 'Pengaturan & Status Basis Data', subtitle: 'Status penyimpanan, skema data, integrasi cloud, dan pencadangan' },

@@ -209,7 +209,7 @@ export const DashboardView: React.FC = () => {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <button
-            onClick={() => setActiveMenu('digital_archive')}
+            onClick={() => setActiveMenu('official_documents')}
             className="p-3 bg-white hover:bg-blue-50 text-slate-800 hover:text-blue-900 rounded-lg border border-slate-200 shadow-2xs text-left transition-all flex flex-col justify-between"
           >
             <FileClock className="w-5 h-5 text-blue-700 mb-2" />

@@ -64,6 +64,8 @@ const MainLayout: React.FC = () => {
         return <MonevView />;
       case 'reports':
         return <ReportsView />;
+      case 'official_documents':
+        return <DocumentGeneratorView />;
       case 'digital_archive':
         return <DigitalArchiveView />;
       case 'ai_generator':

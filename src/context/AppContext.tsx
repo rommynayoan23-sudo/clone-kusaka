@@ -17,9 +17,11 @@ import {
   TeacherDevActivity,
   MonevRecord,
   AuditLog,
-  AppNotification
+  AppNotification,
+  ScheduleItem
 } from '../types';
 import { StorageService } from '../services/storage';
+import { generateClashFreeMasterSchedule, injectTestConflict } from '../services/scheduleEngine';
 
 interface ToastMessage {
   id: string;
@@ -59,6 +61,12 @@ interface AppContextType {
   addTeachingAssignment: (assignment: Omit<TeachingAssignment, 'id'>) => void;
   updateTeachingAssignment: (assignment: TeachingAssignment) => void;
   deleteTeachingAssignment: (id: string) => void;
+
+  scheduleItems: ScheduleItem[];
+  updateScheduleItem: (item: ScheduleItem) => void;
+  bulkSetScheduleItems: (items: ScheduleItem[]) => void;
+  resetScheduleToDefault: () => void;
+  injectTestScheduleConflict: () => void;
 
   calendarEvents: CalendarEvent[];
   addCalendarEvent: (event: Omit<CalendarEvent, 'id'>) => void;
@@ -135,6 +143,18 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
   const [subjects, setSubjects] = useState<Subject[]>(() => StorageService.getSubjects());
   const [classes, setClasses] = useState<ClassRomBel[]>(() => StorageService.getClasses());
   const [teachingAssignments, setTeachingAssignments] = useState<TeachingAssignment[]>(() => StorageService.getTeachingAssignments());
+  const [scheduleItems, setScheduleItems] = useState<ScheduleItem[]>(() => {
+    const saved = StorageService.getScheduleItems();
+    if (saved && saved.length > 0) return saved;
+    const initial = generateClashFreeMasterSchedule(
+      StorageService.getClasses(),
+      StorageService.getTeachers(),
+      StorageService.getSubjects(),
+      StorageService.getTeachingAssignments()
+    );
+    StorageService.saveScheduleItems(initial);
+    return initial;
+  });
   const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[]>(() => StorageService.getCalendarEvents());
   const [workPrograms, setWorkPrograms] = useState<WorkProgram[]>(() => StorageService.getWorkPrograms());
   const [officialDocuments, setOfficialDocuments] = useState<OfficialDocument[]>(() => StorageService.getOfficialDocuments());
@@ -346,6 +366,38 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     StorageService.saveTeachingAssignments(updated);
     logAction('Penghapusan Tugas Mengajar', 'Beban Kerja', 'Menghapus penugasan mengajar');
     showToast('Penugasan mengajar dihapus.', 'info');
+  };
+
+  // Schedule Items
+  const updateScheduleItem = (updatedItem: ScheduleItem) => {
+    const updated = scheduleItems.map(item => item.id === updatedItem.id ? updatedItem : item);
+    setScheduleItems(updated);
+    StorageService.saveScheduleItems(updated);
+    logAction('Pengeditan Jadwal', 'Jadwal Pelajaran', `Mengubah slot ${updatedItem.classRomBelName || ''} ${updatedItem.day} Jam ke-${updatedItem.period}`);
+    showToast(`Slot jadwal ${updatedItem.classRomBelName || ''} berhasil diperbarui.`, 'success');
+  };
+
+  const bulkSetScheduleItems = (items: ScheduleItem[]) => {
+    setScheduleItems(items);
+    StorageService.saveScheduleItems(items);
+    logAction('Pembaruan Jadwal', 'Jadwal Pelajaran', 'Menyimpan pembaruan matriks jadwal');
+    showToast('Matriks jadwal pelajaran berhasil disimpan.', 'success');
+  };
+
+  const resetScheduleToDefault = () => {
+    const defaultItems = generateClashFreeMasterSchedule(classes, teachers, subjects, teachingAssignments);
+    setScheduleItems(defaultItems);
+    StorageService.saveScheduleItems(defaultItems);
+    logAction('Reset Jadwal', 'Jadwal Pelajaran', 'Mengatur ulang jadwal ke alokasi baku bebas benturan');
+    showToast('Jadwal berhasil diatur ulang ke alokasi bebas benturan.', 'success');
+  };
+
+  const injectTestScheduleConflict = () => {
+    const conflictItems = injectTestConflict(scheduleItems);
+    setScheduleItems(conflictItems);
+    StorageService.saveScheduleItems(conflictItems);
+    logAction('Simulasi Benturan', 'Jadwal Pelajaran', 'Mengaktifkan simulasi benturan jadwal untuk pengujian validasi');
+    showToast('Simulasi benturan jadwal aktif. Sistem memvalidasi konflik!', 'info');
   };
 
   // Calendar
@@ -685,6 +737,11 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
         addTeachingAssignment,
         updateTeachingAssignment,
         deleteTeachingAssignment,
+        scheduleItems,
+        updateScheduleItem,
+        bulkSetScheduleItems,
+        resetScheduleToDefault,
+        injectTestScheduleConflict,
         calendarEvents,
         addCalendarEvent,
         updateCalendarEvent,

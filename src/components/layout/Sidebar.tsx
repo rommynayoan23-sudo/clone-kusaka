@@ -17,6 +17,7 @@ import {
   TrendingUp,
   FileBarChart2,
   Archive,
+  FileCheck,
   Sparkles,
   Settings,
   ShieldCheck,
@@ -84,6 +85,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle, mobileOpe
     {
       title: 'OTOMASI & ARSIP',
       items: [
+        { key: 'official_documents', label: 'Generator Dokumen Resmi', icon: FileCheck, badge: 'Naskah Dinas' },
         { key: 'digital_archive', label: 'Arsip Digital', icon: Archive },
         { key: 'ai_generator', label: 'Generator AI KuSaKA', icon: Sparkles, badge: 'AI' },
       ]
