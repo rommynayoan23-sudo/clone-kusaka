@@ -95,9 +95,13 @@ export const DashboardView: React.FC = () => {
           </div>
         </div>
 
-        {/* Decorative watermark */}
-        <div className="absolute right-4 -bottom-6 opacity-10 pointer-events-none select-none font-black text-9xl text-white font-sans">
-          SMAN1
+        {/* Official SMAN 1 Kakas Logo Badge in Hero Banner */}
+        <div className="hidden sm:flex absolute right-6 top-1/2 -translate-y-1/2 w-28 h-28 lg:w-32 lg:h-32 rounded-2xl bg-white/10 backdrop-blur-xs p-2.5 items-center justify-center border border-white/20 shadow-xl">
+          <img
+            src="/assets/aistudio/WhatsApp_Image_2025-11-20_at_12.29.19-removebg-preview__1__c9a0a08a.png"
+            alt="Logo SMA Negeri 1 Kakas"
+            className="w-full h-full object-contain drop-shadow-md"
+          />
         </div>
       </div>
 

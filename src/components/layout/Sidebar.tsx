@@ -122,8 +122,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle, mobileOpe
         {/* Brand Header */}
         <div className="flex items-center justify-between h-18 px-4 border-b border-slate-800 bg-slate-950">
           <div className="flex items-center gap-3 overflow-hidden">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-700 via-blue-800 to-amber-700 flex items-center justify-center text-white font-extrabold text-base shadow-md flex-shrink-0 border border-amber-500/30">
-              K
+            <div className="w-10 h-10 rounded-lg bg-white/10 p-1 flex items-center justify-center flex-shrink-0 border border-slate-700">
+              <img
+                src="/assets/aistudio/WhatsApp_Image_2025-11-20_at_12.29.19-removebg-preview__1__c9a0a08a.png"
+                alt="Logo SMA Negeri 1 Kakas"
+                className="w-full h-full object-contain drop-shadow-xs"
+              />
             </div>
             {!collapsed && (
               <div className="leading-tight truncate">

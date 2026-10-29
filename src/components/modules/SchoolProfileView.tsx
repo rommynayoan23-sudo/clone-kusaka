@@ -448,6 +448,38 @@ export const SchoolProfileView: React.FC = () => {
                   Standar kode klasifikasi 421 untuk urusan pendidikan SMA.
                 </span>
               </div>
+
+              {/* Logo Resmi Aktif */}
+              <div className="md:col-span-2 p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+                <span className="text-xs font-bold text-slate-900 block">
+                  Logo Resmi Kepala Naskah Dinas Terpasang
+                </span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="flex items-center gap-3 p-3 bg-white rounded-lg border border-slate-200">
+                    <img
+                      src="/assets/aistudio/logo_provinsi_c9769acf.png"
+                      alt="Logo Provinsi Sulawesi Utara"
+                      className="w-12 h-14 object-contain flex-shrink-0"
+                    />
+                    <div className="text-xs">
+                      <div className="font-bold text-slate-900">Sisi Kiri: Logo Provinsi</div>
+                      <div className="text-[11px] text-slate-500">Pemerintah Provinsi Sulawesi Utara</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3 p-3 bg-white rounded-lg border border-slate-200">
+                    <img
+                      src="/assets/aistudio/WhatsApp_Image_2025-11-20_at_12.29.19-removebg-preview__1__c9a0a08a.png"
+                      alt="Logo SMA Negeri 1 Kakas"
+                      className="w-12 h-14 object-contain flex-shrink-0"
+                    />
+                    <div className="text-xs">
+                      <div className="font-bold text-slate-900">Sisi Kanan: Logo Sekolah</div>
+                      <div className="text-[11px] text-slate-500">SMA Negeri 1 Kakas (09/11/1983)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}
